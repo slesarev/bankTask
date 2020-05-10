@@ -5,6 +5,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "clients")
@@ -24,7 +25,7 @@ public class Client {
     private Date dateOfBirth;
 
     @OneToMany(mappedBy = "client", fetch = FetchType.EAGER)
-    private List<Account> accountList;
+    private Set<Account> accountList;
 
     public Client(String lastName, String firstName, String patronymic, Date dateOfBirth) {
         this.lastName = lastName;
@@ -69,11 +70,11 @@ public class Client {
         this.patronymic = patronymic;
     }
 
-    public List<Account> getAccountList() {
+    public Set<Account> getAccountList() {
         return accountList;
     }
 
-    public void setAccountList(List<Account> accountList) {
+    public void setAccountList(Set<Account> accountList) {
         this.accountList = accountList;
     }
 

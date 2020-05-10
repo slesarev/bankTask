@@ -117,8 +117,8 @@ public class BankTaskDAOImpl implements BankTaskDAO {
         outAccount.setBalance(outAccount.getBalance() - transaction.getSum());
         Account inAccount = transaction.getInAccount();
         inAccount.setBalance(inAccount.getBalance() + transaction.getSum());
-        currentSession.saveOrUpdate(outAccount);
-        currentSession.saveOrUpdate(inAccount);
+        currentSession.update(outAccount);
+        currentSession.update(inAccount);
     }
 
 }

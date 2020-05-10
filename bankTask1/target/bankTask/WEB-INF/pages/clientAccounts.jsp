@@ -9,7 +9,7 @@
     <a href="${pageContext.request.contextPath}/admin/clients/${client.id}/accounts/add">Add account</a>
     <a href="${pageContext.request.contextPath}/admin">back to clients</a>
 </tr>
-<h1>Счета клиента ${client.lastName} ${client.firstName}</h1>
+<h1>Client accounts ${client.lastName} ${client.firstName}</h1>
 <form>
     <table>
         <thead>

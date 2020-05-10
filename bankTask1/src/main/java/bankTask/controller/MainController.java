@@ -50,6 +50,7 @@ public class MainController {
                                  @ModelAttribute("transaction") Transaction transaction, BindingResult result) {
         transaction.setInAccount(bankTaskService.getAccount(mInAccountId));
         transaction.setOutAccount(bankTaskService.getAccount(outAccountId));
+        bankTaskService.doTransaction(transaction);
         bankTaskService.saveTransaction(transaction);
         return "redirect:/admin/clients/{clientId}/transactions";
     }
@@ -141,7 +142,7 @@ public class MainController {
     public String ShowFormForTransactions(@PathVariable("clientId") Long clientId, Model model) {
         Client client = bankTaskService.getClient(clientId);
         model.addAttribute("client", client);
-        List<Account> accounts = client.getAccountList();
+        Set<Account> accounts = client.getAccountList();
         Set<Transaction> transactionsSet = new HashSet<>();
         for (Account ac : accounts
         ) {
