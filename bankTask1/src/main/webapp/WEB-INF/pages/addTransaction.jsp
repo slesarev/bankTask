@@ -4,9 +4,9 @@
 <html>
 <head>
     <title>Add transaction</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-<%--@elvariable id="transaction" type="bankTask"--%>
 <form:form action="${pageContext.request.contextPath}/admin/clients/${client.id}/transaction/add/${account.id}"
            method='POST' modelAttribute="transaction">
     <table>

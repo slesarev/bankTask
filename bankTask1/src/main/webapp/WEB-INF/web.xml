@@ -6,7 +6,9 @@
          id="WebApp_ID" version="3.0">
 
   <display-name>Spring MVC Security</display-name>
+
   <session-config>
     <session-timeout>20</session-timeout>
   </session-config>
+
 </web-app>

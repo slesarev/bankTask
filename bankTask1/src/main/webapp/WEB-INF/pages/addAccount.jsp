@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Add account</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 <form:form action="${pageContext.request.contextPath}/admin/clients/${client.id}/accounts/add"

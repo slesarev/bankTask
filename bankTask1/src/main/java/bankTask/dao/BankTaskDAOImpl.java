@@ -30,9 +30,6 @@ public class BankTaskDAOImpl implements BankTaskDAO {
         cq.select(root).where(cb.equal(root.get("userName"), userName));
         Query query = session.createQuery(cq);
         return query.getResultList();
-       /* Session currentSession = sessionFactory.getCurrentSession();
-        UserInfo theCustomer = currentSession.get(UserInfo.class, userName);
-        return theCustomer;*/
     }
 
     @Override

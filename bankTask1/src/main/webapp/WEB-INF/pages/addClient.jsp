@@ -3,6 +3,9 @@
 <html>
 <head>
     <title>Add</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    >
+
 </head>
 <body>
 <form:form action="${pageContext.request.contextPath}/admin/add" method='POST' modelAttribute="client">
